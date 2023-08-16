@@ -1,10 +1,8 @@
 local Addon, Private =  ...
-local Module = Bagnon:NewModule(Addon, Private)
 
 -- TODO: Figure out how this gets injected for Bagnon
 _G["BagnonUIMods"] = Private
 
-Private.Items = {}
 Private.JunkItems = {}
 Private.JunkTotal = 0
 
@@ -15,17 +13,7 @@ local t = vendorTrashCount:CreateFontString(nil, "OVERLAY", "GameTooltipText")
 t:SetPoint("LEFT", vendorTrashCount, -40, 0)
 t:SetText("JUNK: ")
 
-function AmendFunction(domain, name, hook)
-	local original = domain and domain[name]
-	if original then
-		domain[name] = function(...)
-            original(...)
-            hook(...)
-		end
-	end
-end
-
-function OnToggle()
+local function OnToggle()
     local bgnInventoryFrame = _G["BagnonInventory1"]
     if bgnInventoryFrame and bgnInventoryFrame:IsVisible() then
         vendorTrashCount:SetPoint("BOTTOM", bgnInventoryFrame.BottomRightCorner, -20, -20)
@@ -36,9 +24,9 @@ function OnToggle()
 end
 
 
-function OnItemUpdate(items)
+local function OnItemUpdate(items)
     -- FIXME: Bug - on first character swap, junk total doesn't update
-    if items.bags == nil or items.order == nil then
+    if items == nil or items.bags == nil or items.order == nil then
         return
     end
 

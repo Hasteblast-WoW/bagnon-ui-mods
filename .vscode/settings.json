@@ -1,0 +1,15 @@
+{
+    "Lua.diagnostics.globals": [
+        "MoneyFrame_SetType",
+        "MoneyFrame_Update",
+        "_G",
+        "print",
+        "hooksecurefunc",
+        "CreateFrame",
+        "ipairs",
+        "BACKPACK_CONTAINER",
+        "NUM_BAG_SLOTS",
+        "select",
+        "GetItemInfo"
+    ]
+}

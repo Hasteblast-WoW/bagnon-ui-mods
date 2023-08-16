@@ -1,4 +1,4 @@
-function CreateSquare(squareName, colour)
+local function CreateSquare(squareName, colour)
     local square = CreateFrame("Frame", squareName, UIParent)
     square:SetFrameStrata("BACKGROUND")
     square:SetWidth(5)
