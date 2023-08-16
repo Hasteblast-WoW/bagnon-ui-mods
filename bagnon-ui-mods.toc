@@ -1,7 +1,8 @@
-## Interface: 11403
+## Interface: 30402
+## Interface-Classic: 11403
+## Version: @project-version@
 ## Author: Josh Santos <josh@omnidapps.com>
 ## Title: Bagnon UI Mods
 ## Notes: This plugin is in |cFFFF0000development|r.
-## Version: 0.0.1
 
 classic.xml
