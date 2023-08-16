@@ -4,5 +4,7 @@
 ## Author: Josh Santos <josh@omnidapps.com>
 ## Title: Bagnon UI Mods
 ## Notes: This plugin is in |cFFFF0000development|r.
+## X-Curse-Project-ID: 903446
+## X-Wago-ID: aNDm9Y6o
 
 classic.xml
